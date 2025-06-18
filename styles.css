@@ -1,0 +1,458 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variables */
+:root {
+    --turo-blue: #0073c5;
+    --turo-light-blue: #e6f4ff;
+    --turo-dark: #333333;
+    --turo-gray: #666666;
+    --turo-light-gray: #f5f5f5;
+    --turo-border: #e0e0e0;
+    --turo-green: #00a650;
+    --turo-white: #ffffff;
+}
+
+/* Global Styles */
+body {
+    color: var(--turo-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--turo-blue);
+    color: var(--turo-white);
+}
+
+.btn-primary:hover {
+    background-color: #005a9e;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--turo-blue);
+    color: var(--turo-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--turo-light-blue);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.card {
+    background: var(--turo-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header */
+.header {
+    background-color: var(--turo-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--turo-blue);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: var(--turo-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--turo-blue);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-action {
+    margin-left: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--turo-dark);
+}
+
+.header-action.btn {
+    padding: 8px 16px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--turo-white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-search {
+    background: var(--turo-white);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 12px;
+    border: 1px solid var(--turo-border);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-btn {
+    background-color: var(--turo-blue);
+    color: var(--turo-white);
+    border: none;
+    border-radius: 4px;
+    padding: 0 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: var(--turo-white);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.step-icon {
+    font-size: 48px;
+    color: var(--turo-blue);
+    margin-bottom: 20px;
+}
+
+.step-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.step-description {
+    color: var(--turo-gray);
+}
+
+/* Featured Cars */
+.featured-cars {
+    background-color: var(--turo-light-gray);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: var(--turo-white);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-details {
+    padding: 20px;
+}
+
+.car-make {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.car-model {
+    color: var(--turo-gray);
+    margin-bottom: 10px;
+}
+
+.car-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.car-price span {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--turo-gray);
+}
+
+.car-rating {
+    display: flex;
+    align-items: center;
+    color: var(--turo-green);
+    font-weight: 600;
+}
+
+.car-rating i {
+    margin-right: 5px;
+}
+
+/* Become Host */
+.become-host {
+    background-color: var(--turo-white);
+}
+
+.host-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.host-content {
+    padding-right: 40px;
+}
+
+.host-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.host-description {
+    margin-bottom: 30px;
+    color: var(--turo-gray);
+}
+
+.host-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Benefits */
+.benefits {
+    background-color: var(--turo-light-blue);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.benefit-icon {
+    font-size: 48px;
+    color: var(--turo-blue);
+    margin-bottom: 20px;
+}
+
+.benefit-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.benefit-description {
+    color: var(--turo-gray);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--turo-dark);
+    color: var(--turo-white);
+    padding: 60px 0 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-link {
+    margin-bottom: 10px;
+}
+
+.footer-link a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.footer-link a:hover {
+    color: var(--turo-white);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--turo-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-search {
+        grid-template-columns: 1fr;
+    }
+    
+    .host-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .host-content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .header-action:not(.btn) {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+}
